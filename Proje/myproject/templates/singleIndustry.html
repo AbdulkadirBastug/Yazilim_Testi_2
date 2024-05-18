@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="DataSoft  IT Solutions &  Services Template">
+  <link href="{% static 'images/logo/logo.png' %}" rel="icon">
+  <title>Blog</title>
+
+  <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+  <link rel="stylesheet" href="{% static 'css/all.css' %}">
+  <link rel="stylesheet" href="{% static 'css/libraries.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="preloader">
+      <div class="loading"><span></span><span></span><span></span><span></span></div>
+    </div><!-- /.preloader -->
+
+    <!-- =========================
+        Header
+    =========================== -->
+    <header class="header header-transparent header-full">
+      <nav class="navbar navbar-expand-lg sticky-navbar">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="{% static 'images/logo/icon.png' %}" class="logo-light" alt="logo">
+
+          </a>
+          <button class="navbar-toggler" type="button">
+            <span class="menu-lines"><span></span></span>
+          </button>
+          <div class="header__top-right">
+            <ul class="list-unstyled d-flex justify-content-end align-items-center mb-0">
+              <li>
+                <ul class="navbar-actions list-unstyled mb-0 d-flex align-items-center">
+                  
+                  <li>
+                    <button>
+                      <a href="/logout/" class="icon-user color-white">Logout</a>
+                    </button>
+                  </li>
+                </ul><!-- /.navbar-actions -->
+              </li>
+            </ul>
+          </div><!-- /.header-top-right -->
+          <div class="collapse navbar-collapse" id="mainNavigation">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav__item has-dropdown">
+                <a href="/index/" class="nav__item-link active">Home</a>
+              </li><!-- /.nav-item -->
+              <li class="nav__item has-dropdown">
+                <a href="/blog/" class="nav__item-link active">Blog</a>
+                
+              </li><!-- /.nav-item -->
+              <li class="nav__item">
+                <a href="/industry/" class="nav__item-link active">Industry</a>
+              </li><!-- /.nav-item -->
+            </ul><!-- /.navbar-nav -->
+            <button class="close-mobile-menu d-block d-lg-none"><i class="fas fa-times"></i></button>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+      </nav><!-- /.navabr -->
+    </header><!-- /.Header -->
+
+    <!-- ============================
+        Slider
+    ============================== -->
+    <section class="page-title page-title-layout14 bg-overlay bg-overlay-gradient bg-parallax text-center">
+      <div class="bg-img"><img src="{% static 'images/page-titles/14.jpg' %}" alt="background"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="pagetitle__heading">Our Industry</h1>
+          
+          </div><!-- /.col-lg-12 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.page-title -->
+
+
+    <!-- ======================
+      Blog Grid
+    ========================= -->
+    <section class="blog-grid">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-sm-12 col-md-6 col-lg-12">
+            <div class="post-item">
+              <div class="post__img">
+                
+                <img src="{{ post.image.url }}" alt="blog image">
+               
+              </div><!-- /.blog-img -->
+              <div class="post__body">
+                <!-- <div class="post__meta-cat">
+                  <a href="#">Consulting</a><a href="#">Sales</a>
+                </div> -->
+                <h4 class="post__title">{{ post.name }}</h4>
+                <p class="post__desc">{{ post.content  }}</p>
+
+                
+            
+              </div><!-- /.blog-content -->
+            </div><!-- /.post-item -->
+          </div><!-- /.col-lg-4 -->
+
+          <div class="col-sm-8 col-md-8 col-lg-8">
+            
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <small>{{post.author}}</small>
+          </span>
+        </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.blog Grid -->
+
+    <!-- ========================
+        Footer
+      ========================== -->
+    <footer class="footer bg-secondary">
+      <div class="container">
+        
+        <div class="row">
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </footer><!-- /.Footer -->
+    <button id="scrollTopBtn"><i class="fas fa-long-arrow-alt-up"></i></button>
+
+  </div>
+  
+
+  <script src="{% static '/js/jquery-3.5.1.min.js' %}"></script>
+  <script src="{% static '/js/plugins.js' %}"></script>
+  <script src="{% static '/js/main.js' %}"></script>
+</body>
+
+</html>
